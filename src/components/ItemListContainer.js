@@ -1,13 +1,17 @@
 import React from "react";
 import "../styles/itemlistcontainer.css"
+import CardsList from "./CardLists";
+import { useParams } from "react-router-dom";
 
-export default function ItemListContainer(props) {
+const ItemListContainer = () => {
+    const { categoria } = useParams();
+  
     return (
-        <div>
-            <h1>{props.titulo}</h1>
+      <>
+        <div className="contenedor">
+          <CardsList categoria={categoria} />
         </div>
+      </> 
     );
-}
-ItemListContainer.defaultProps = {
-    titulo: 'Saludo predeterminado: Hola!'
-}
+  };
+  export default ItemListContainer;

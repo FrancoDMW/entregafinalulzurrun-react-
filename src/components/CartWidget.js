@@ -4,8 +4,8 @@ import cart from '../cart.png';
 export default function CartWidget() {
     return (
             <div className = "carritoDiv">
-                <img src={cart} className = "carrito"></img>
-                <p class = "notificacion">3</p>
+                <img src={cart} className = "carrito" alt="carro"></img>
+                <p className = "notificacion">3</p>
             </div>
     );
 }

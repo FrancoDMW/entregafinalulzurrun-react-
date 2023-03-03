@@ -1,12 +1,18 @@
 import "../styles/navbar.css"
+import Logo from "../img/logo.jpg"
 import CartWidget from "./CartWidget";
+import { NavLink } from 'react-router-dom'
 import { useState } from "react";
 export default function Navbar() {
+    const categoria = {
+        manga: "Manga",
+        comic: "Comic",
+    }
     const [isNavExpanded, setIsNavExpanded] = useState(false)
     return (
         <nav className="navigation">
             <a href="/" className="brand-name">
-                Once Comics
+                <img src={Logo} alt="logo" className="logoHeader"></img>
             </a>
             <button className="hamburger" onClick={() => {
                 setIsNavExpanded(!isNavExpanded);
@@ -31,13 +37,13 @@ export default function Navbar() {
                 }>
                 <ul>
                     <li>
-                        <a href="/inicio">Inicio</a>
+                        <NavLink to={'/'} className="headerBtn fondo">Inicio</NavLink>
                     </li>
                     <li>
-                        <a href="/mangas">Mangas</a>
+                        <NavLink to={`/categoria/${categoria.manga}`} className="headerBtn fondo">Mangas</NavLink>
                     </li>
                     <li>
-                        <a href="/comics">Comics</a>
+                        <NavLink to={`/categoria/${categoria.comic}`} className="headerBtn fondo">Comics</NavLink>
                     </li>
                 </ul>
             </div>

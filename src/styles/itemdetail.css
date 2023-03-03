@@ -1,0 +1,29 @@
+.card-detail-general{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.card-detail{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.click-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.click-p1{
+    cursor: pointer;
+}
+.precio{
+    display:flex;
+    align-items:center;
+}
+.h3espacio{
+    margin: 50px;
+}
+.colorLetra{
+    color:white;
+}
