@@ -1,7 +1,4 @@
-  .tarjeta-body {
-    width: 270px;
-  }
-  
+
   .card {
     width: 270px;
     transition: all 0.25s;
@@ -41,6 +38,7 @@
     display: grid;
     margin: 25px;
     margin-top: 30px;
+    margin-bottom: 30px;
     grid-template-columns: repeat(2, 1fr);
   }
   
@@ -52,7 +50,6 @@
   .btn-secondary {
     font-size: 15px;
     background-color: #6eb41c;
-    border-radius: 5%;
     cursor: pointer;
   }
 

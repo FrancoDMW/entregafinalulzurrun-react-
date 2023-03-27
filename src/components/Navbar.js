@@ -1,9 +1,13 @@
 import "../styles/navbar.css"
-import Logo from "../img/logo.jpg"
+import NavCartIcon from "./NavCarticon";
 import CartWidget from "./CartWidget";
+import { useContext } from "react";
 import { NavLink } from 'react-router-dom'
 import { useState } from "react";
+import { CartContext } from "../context/CartContext"; 
+
 export default function Navbar() {
+    const { quantity } = useContext(CartContext);
     const categoria = {
         manga: "Manga",
         comic: "Comic",
@@ -11,9 +15,7 @@ export default function Navbar() {
     const [isNavExpanded, setIsNavExpanded] = useState(false)
     return (
         <nav className="navigation">
-            <a href="/" className="brand-name">
-                <img src={Logo} alt="logo" className="logoHeader"></img>
-            </a>
+            <NavLink to={'/'} className="logoHeader"></NavLink>
             <button className="hamburger" onClick={() => {
                 setIsNavExpanded(!isNavExpanded);
             }}>
@@ -48,7 +50,7 @@ export default function Navbar() {
                 </ul>
             </div>
             <div>
-                <CartWidget />
+                <NavCartIcon quantity={quantity} />
             </div>
         </nav>
     );

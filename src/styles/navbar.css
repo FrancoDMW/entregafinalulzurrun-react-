@@ -5,15 +5,17 @@
     align-items: center;
     position: relative;
     padding: 0.5rem 0rem;
-    background-image:url("../img/bkg_repeat2.gif");
+    background-image: url("../img/bkg_repeat2.gif");
     color: black;
     box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
 }
 
-.logoHeader{
-    width:100px;
-    height:100px;
+.logoHeader {
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/logo.png");
     border-radius: 30%;
+    margin-left:40px;
 }
 
 .brand-name {
@@ -52,7 +54,7 @@
     background-color: #283b8b;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
-    position:absolute;
+    position: absolute;
     top: 50%;
     right: 110px;
     transform: translateY(-50%);
@@ -109,13 +111,13 @@
     }
 }
 
-.carritoDiv{
+.carritoDiv {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.carrito{
+.carrito {
     height: 40px;
     width: 40px;
     padding: 2px;
@@ -123,8 +125,8 @@
     cursor: pointer;
 }
 
-.notificacion{
-    background-color:cadetblue;
+.notificacion {
+    background-color: cadetblue;
     border-radius: 50%;
     height: 40px;
     width: 40px;
@@ -136,11 +138,11 @@
 }
 
 .fondo {
-    background:#78BC61;
+    background: #78BC61;
 }
 
 .headerBtn {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-transform: uppercase;
     font-size: 30px;
     display: inline-block;
@@ -152,4 +154,28 @@
     box-shadow: 2px 2px 2px rgb(0 0 0 / 40%);
     border-radius: 10%;
     text-align: center;
+}
+
+.cartContainer {
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.carrito2{
+    background-image: url("../img/carrito3030.png");
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    cursor: pointer;
+    border: null;
 }

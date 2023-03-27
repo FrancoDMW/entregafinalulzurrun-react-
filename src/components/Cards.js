@@ -1,22 +1,21 @@
 import "../styles/cards.css";
 import { Link } from "react-router-dom";
+import ItemCount from "./ItemCount";
 
-const Card = ({ src, alt, title, precio, id }) => {
+const Card = ({ url, alt, title, price, id, num, car }) => {
     return (
       <div key={id} className="card">
         <a className="card-img">
-        <Link className="Link" to={`/detail/${id}`}>
-          <img src={src} alt={alt} />
+        <Link className="Link" to={`/detail/${num}`}>
+          <img src={url} alt={alt} />
         </Link>
         </a>
         <h4 className="card-title">{title}</h4>
         <div className="cardBody">
           <h6 className="precio">
-            <strong>${precio}</strong>
+            <strong>${price}</strong>
           </h6>
-          <button className="btn btn-secondary">
-              Agregar al carrito
-          </button>
+          <a>{car}</a>
         </div>
       </div>
     );
